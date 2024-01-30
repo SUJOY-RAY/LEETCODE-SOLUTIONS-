@@ -14,7 +14,6 @@ public class Solution {
 
             numIndices.put(num, i);
         }
-
         return new int[0];
     }
 }
