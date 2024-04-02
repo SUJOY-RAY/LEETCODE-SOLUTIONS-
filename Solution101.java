@@ -15,13 +15,14 @@
  */
 class Solution {
     private boolean isMirror(TreeNode t1,TreeNode t2){
-        if(t1==null&&t2==null){
+        if(t1==null&&t2==null){//if both nodes are null the tree is symmetric
             return true;
         }
-        if(t1==null||t2==null){
+        if(t1==null||t2==null){//if either on or no nodes are null then the tree is symmetric
             return false;
         }
         return (t1.val==t2.val)&&isMirror(t1.right,t2.left)&&isMirror(t1.left,t2.right);
+        //checking if the two node values are same and recursively checking if the two nodes are mirror in nature
     }
     public boolean isSymmetric(TreeNode root) {
         
