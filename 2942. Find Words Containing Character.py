@@ -5,4 +5,3 @@ class Solution:
             if x in words[i]:
                 result.append(i)
         return result 
-        
