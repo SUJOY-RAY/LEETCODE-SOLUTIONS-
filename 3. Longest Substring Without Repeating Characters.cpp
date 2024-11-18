@@ -18,3 +18,24 @@ public:
         return longest;
     }
 };
+
+// class Solution {
+// public:
+//     int lengthOfLongestSubstring(string s) {
+//         int n=s.size();
+//         unordered_set<int> seen;
+//         int maxLength=0;
+//         int start=0;
+
+//         for(int end=0;end<n;++end){
+//             while(seen.find(s[end])!=seen.end()){
+//                 seen.erase(s[start]);
+//                 start++;
+//             }
+//             seen.insert(s[end]);
+//             maxLength=max(maxLength,end-start+1);
+//         }
+//         return maxLength;
+        
+//     }
+// };
