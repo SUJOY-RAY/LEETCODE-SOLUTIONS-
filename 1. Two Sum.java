@@ -1,3 +1,5 @@
+// Method 1 complexity O(n)
+
 import java.util.Arrays;
 
 class Solution {
