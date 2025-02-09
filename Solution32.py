@@ -14,5 +14,3 @@ class Solution:
                     stack.append(i)
 
         return validLen
-
-
