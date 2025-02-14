@@ -1,0 +1,25 @@
+// class Solution {
+//     public int maxRepeating(String sequence, String word) {
+//         int maxRepeat = 0;
+//         StringBuffer repeatWord = new StringBuffer(word);
+
+//         while (sequence.contains(repeatWord.toString())){
+//             maxRepeat++;
+//             repeatWord.append(word);
+//         }
+
+//         return maxRepeat;
+//     }
+// }
+
+class Solution {
+    public int maxRepeating(String sequence, String word) {
+       int count =1;
+
+       while(sequence.contains(word.repeat(count))){
+        count++;
+       }
+       return count-1;
+       
+    }
+}
