@@ -8,6 +8,7 @@ public class Solution {
             int num = nums[i];
             int complement = target - num;
 
+            
             if (numIndices.containsKey(complement)) {
                 return new int[]{numIndices.get(complement), i};
             }
