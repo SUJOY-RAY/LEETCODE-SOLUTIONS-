@@ -1,0 +1,20 @@
+class Solution {
+    public long countInterestingSubarrays(List<Integer> nums, int modulo, int k) {
+        Map<Integer, Long> countMap = new HashMap<>();
+        countMap.put(0, 1L);
+        long result = 0;
+        int prefixCount = 0;
+
+        for(int num:nums){
+            if(num%modulo==k){
+                prefixCount++;
+            }
+            int currentMod = prefixCount%modulo;
+            int targetMod = (currentMod-k+modulo)%modulo;
+
+            result+=countMap.getOrDefault(targetMod, 0L);
+            countMap.put(currentMod, countMap.getOrDefault(currentMod, 0L)+1);
+        }
+        return result;    
+    }
+}
